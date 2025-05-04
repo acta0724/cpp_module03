@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/03 18:43:42 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/04 01:39:20 by iwasakatsuy      ###   ########.fr       */
+/*   Created: 2025/05/03 18:53:28 by kiwasa            #+#    #+#             */
+/*   Updated: 2025/05/04 19:19:01 by iwasakatsuy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include <iostream>
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int main(void) {
-	ClapTrap a("Apple");
-	ClapTrap b = a;
-	ClapTrap c("Cherry");
+#include "ScavTrap.hpp"
 
-	c = a;
-	a.attack("Banana");
-	a.takeDamage(5);
-	a.beRepaired(3);
-	for (int i = 0; i < 10; ++i) {
-		a.attack("Banana");
-	}
-	ClapTrap d("Durian");
-	d.attack("Banana");
-	d.takeDamage(5);
-	return 0;
-}
+class FragTrap : virtual public ScavTrap {
+ public:
+ 	FragTrap(const std::string& name);
+ 	FragTrap(const FragTrap& other);
+ 	FragTrap& operator=(const FragTrap& other);
+ 	virtual ~FragTrap();
+ 	void attack(const std::string& target);
+ 	void highFivesGuys(void);
+};
+
+#endif

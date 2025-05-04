@@ -3,19 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+         #
+#    By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/03 18:52:39 by kiwasa            #+#    #+#              #
-#    Updated: 2025/05/03 22:27:17 by kiwasa           ###   ########.fr        #
+#    Updated: 2025/05/04 18:55:29 by iwasakatsuy      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = FragTrap
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

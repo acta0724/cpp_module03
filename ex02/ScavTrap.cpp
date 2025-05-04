@@ -6,7 +6,7 @@
 /*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:53:08 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/04 18:29:18 by iwasakatsuy      ###   ########.fr       */
+/*   Updated: 2025/05/04 01:50:48 by iwasakatsuy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,10 @@ ScavTrap::~ScavTrap(void) {
 
 void ScavTrap::attack(const std::string& target) {
 	if (_hitPoints == 0) {
-		std::cout << "ScavTrap \"" << _name \
-			<< "\" has no hit points left and cannot be repaired!" << std::endl;
+		std::cout << "ScavTrap \"" << _name << "\" has no hit points left and cannot be repaired!" << std::endl;
 	}
 	else if (_energyPoints == 0) {
-		std::cout << "ScavTrap \"" << _name \
-			<< "\" has no energy points left and cannot be repaired!\n";
+		std::cout << "ScavTrap \"" << _name << "\" has no energy points left and cannot be repaired!\n";
 	}
 	else {
 		--_energyPoints;
@@ -53,6 +51,5 @@ void ScavTrap::attack(const std::string& target) {
 }
 
 void ScavTrap::guardGate() {
-	std::cout << "ScavTrap \"" << _name << \
-		"\" is now in Gate keeper mode." << std::endl;
+	std::cout << "ScavTrap \"" << _name << "\" is now in Gate keeper mode." << std::endl;
 }

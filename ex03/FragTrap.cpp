@@ -6,7 +6,7 @@
 /*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:53:25 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/04 17:30:05 by iwasakatsuy      ###   ########.fr       */
+/*   Updated: 2025/05/04 18:57:56 by iwasakatsuy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 FragTrap::FragTrap(const std::string& name) 
-	: ScavTrap(name) {
+	: ClapTrap(name), ScavTrap(name) {
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
@@ -22,7 +22,7 @@ FragTrap::FragTrap(const std::string& name)
 }
 
 FragTrap::FragTrap(const FragTrap& other)
-	: ScavTrap(other) {
+	: ClapTrap(other), ScavTrap(other) {
 	std::cout << "FragTrap \"" << this->_name << "\" copy-constructed\n";
 }
 
@@ -37,10 +37,12 @@ FragTrap::~FragTrap(void) {
 
 void FragTrap::attack(const std::string& target) {
 	if (_hitPoints == 0) {
-		std::cout << "FragTrap \"" << _name << "\" has no hit points left and cannot be repaired!" << std::endl;
+		std::cout << "FragTrap \"" << _name \
+			<< "\" has no hit points left and cannot be repaired!" << std::endl;
 	}
 	else if (_energyPoints == 0) {
-		std::cout << "FragTrap \"" << _name << "\" has no energy points left and cannot be repaired!\n";
+		std::cout << "FragTrap \"" << _name \
+			<< "\" has no energy points left and cannot be repaired!\n";
 	}
 	else {
 		--_energyPoints;

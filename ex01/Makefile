@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+         #
+#    By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/03 18:51:39 by kiwasa            #+#    #+#              #
-#    Updated: 2025/05/03 22:27:10 by kiwasa           ###   ########.fr        #
+#    Updated: 2025/05/04 18:37:16 by iwasakatsuy      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
