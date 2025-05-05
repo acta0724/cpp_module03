@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
+/*   By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:53:25 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/04 18:57:56 by iwasakatsuy      ###   ########.fr       */
+/*   Updated: 2025/05/05 14:46:03 by kiwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,17 @@ FragTrap::~FragTrap(void) {
 
 void FragTrap::attack(const std::string& target) {
 	if (_hitPoints == 0) {
-		std::cout << "FragTrap \"" << _name \
-			<< "\" has no hit points left and cannot be repaired!" << std::endl;
+		std::cout	<< "Stop already, FragTrap "
+					<< _name << "'s life points are zero..." << std::endl;
 	}
 	else if (_energyPoints == 0) {
-		std::cout << "FragTrap \"" << _name \
-			<< "\" has no energy points left and cannot be repaired!\n";
-	}
+		std::cout << "FragTrap " << _name << ", Let's go to the inn!!" << std::endl;
+    }
 	else {
 		--_energyPoints;
-		std::cout << _name << " attacks " \
-			<< target << ", causing " << _attackDamage \
-			<< " points of damage!" << std::endl;
+		std::cout 	<< _name << " attacks " \
+					<< target << ", causing " << _attackDamage \
+					<< " points of damage!" << std::endl;
 	}
 }
 

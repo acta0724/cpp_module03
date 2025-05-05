@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
+/*   By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:53:08 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/04 01:50:48 by iwasakatsuy      ###   ########.fr       */
+/*   Updated: 2025/05/05 14:38:04 by kiwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap(const std::string& name)
 
 ScavTrap::ScavTrap(const ScavTrap& other)
 	: ClapTrap(other) {
-	std::cout << "ScavTrap \"" << this->_name << "\" copy-constructed\n";
+	std::cout << "ScavTrap \"" << this->_name << "\" copy-constructed" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap &other) {
@@ -37,16 +37,17 @@ ScavTrap::~ScavTrap(void) {
 
 void ScavTrap::attack(const std::string& target) {
 	if (_hitPoints == 0) {
-		std::cout << "ScavTrap \"" << _name << "\" has no hit points left and cannot be repaired!" << std::endl;
+		std::cout	<< "Stop already, ScavTrap "
+					<< _name << "'s life points are zero..." << std::endl;
 	}
 	else if (_energyPoints == 0) {
-		std::cout << "ScavTrap \"" << _name << "\" has no energy points left and cannot be repaired!\n";
-	}
+		std::cout << "ScavTrap " << _name << ", Let's go to the inn!!" << std::endl;
+    }
 	else {
 		--_energyPoints;
-		std::cout << _name << " attacks " \
-			<< target << ", causing " << _attackDamage \
-			<< " points of damage!" << std::endl;
+		std::cout 	<< _name << " attacks " \
+					<< target << ", causing " << _attackDamage \
+					<< " points of damage!" << std::endl;
 	}
 }
 

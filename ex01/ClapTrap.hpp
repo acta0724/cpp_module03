@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
+/*   By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 01:43:44 by iwasakatsuy       #+#    #+#             */
-/*   Updated: 2025/05/04 18:36:20 by iwasakatsuy      ###   ########.fr       */
+/*   Updated: 2025/05/05 14:08:16 by kiwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,5 @@ class ClapTrap {
  	void takeDamage(unsigned int amount);
  	void beRepaired(unsigned int amount);
 };
+
 #endif

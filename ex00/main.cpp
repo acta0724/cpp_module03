@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
+/*   By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:43:42 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/04 01:39:20 by iwasakatsuy      ###   ########.fr       */
+/*   Updated: 2025/05/05 13:42:14 by kiwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,8 @@ int main(void) {
 	ClapTrap d("Durian");
 	d.attack("Banana");
 	d.takeDamage(5);
+	d.takeDamage(5);
+	d.takeDamage(5);
+	d.attack("Banana");
 	return 0;
 }
