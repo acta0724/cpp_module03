@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+        */
+/*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:53:08 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/05 14:45:45 by kiwasa           ###   ########.fr       */
+/*   Updated: 2025/05/05 15:14:23 by iwasakatsuy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void ScavTrap::attack(const std::string& target) {
 		--_energyPoints;
 		std::cout 	<< _name << " attacks " \
 					<< target << ", causing " << _attackDamage \
-					<< " points of damage!" << std::endl;
+					<< " points of damage!!!" << std::endl;
 	}
 }
 

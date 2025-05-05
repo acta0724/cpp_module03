@@ -6,16 +6,16 @@
 /*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:53:28 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/04 17:28:16 by iwasakatsuy      ###   ########.fr       */
+/*   Updated: 2025/05/05 14:57:50 by iwasakatsuy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-class FragTrap : public ScavTrap {
+class FragTrap : public ClapTrap {
  public:
  	FragTrap(const std::string& name);
  	FragTrap(const FragTrap& other);

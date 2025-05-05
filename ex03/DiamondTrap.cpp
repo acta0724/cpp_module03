@@ -6,7 +6,7 @@
 /*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:53:35 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/04 18:23:51 by iwasakatsuy      ###   ########.fr       */
+/*   Updated: 2025/05/05 15:14:04 by iwasakatsuy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <iostream>
 
 DiamondTrap::DiamondTrap(void)
-	: ClapTrap("default_clap_name"),
-	  ScavTrap("default"),
-	  FragTrap("default") {
+	: ClapTrap("default_clap"),
+	  ScavTrap("default_scav"),
+	  FragTrap("default_frag") {
 		this->_name = "default";
 		this->ClapTrap::_name = this->_name + "_clap_name";
 		this->_hitPoints = FragTrap::_hitPoints;
@@ -26,9 +26,9 @@ DiamondTrap::DiamondTrap(void)
 }
 
 DiamondTrap::DiamondTrap(const std::string& name)
-	: ClapTrap(name + "_clap_name"),
-	  ScavTrap(name),
-	  FragTrap(name) {
+	: ClapTrap(name + "_clap"),
+	  ScavTrap(name + "_scav"),
+	  FragTrap(name + "_frag") {
 		this->_name = name;
 		this->_hitPoints = FragTrap::_hitPoints;
 		this->_energyPoints = ScavTrap::_energyPoints;
@@ -57,8 +57,8 @@ DiamondTrap::~DiamondTrap(void) {
 }
 
 void DiamondTrap::whoAmI(void) {
-	std::cout << "私はDiamondTrap \"" << this->_name 
-		<< "\" で、ClapTrap名は \"" << this->ClapTrap::_name << "\" です" << std::endl;
+	std::cout << "I am a DiamondTrap \"" << this->_name 
+		<< "\" and a ClapTrap \"" << this->ClapTrap::_name << "\"" << std::endl;
 }
 
 void DiamondTrap::attack(const std::string& target) {

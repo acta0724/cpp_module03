@@ -14,7 +14,7 @@
 #include <iostream>
 
 FragTrap::FragTrap(const std::string& name) 
-	: ClapTrap(name), ScavTrap(name) {
+	: ClapTrap(name) {
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
@@ -22,12 +22,12 @@ FragTrap::FragTrap(const std::string& name)
 }
 
 FragTrap::FragTrap(const FragTrap& other)
-	: ClapTrap(other), ScavTrap(other) {
+	: ClapTrap(other) {
 	std::cout << "FragTrap \"" << this->_name << "\" copy-constructed\n";
 }
 
 FragTrap& FragTrap::operator=(const FragTrap &other) {
-	ScavTrap::operator=(other);
+	ClapTrap::operator=(other);
 	return *this;
 }
 

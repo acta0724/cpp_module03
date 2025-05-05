@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+        */
+/*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:53:25 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/05 14:42:55 by kiwasa           ###   ########.fr       */
+/*   Updated: 2025/05/05 14:57:43 by iwasakatsuy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 FragTrap::FragTrap(const std::string& name) 
-	: ScavTrap(name) {
+	: ClapTrap(name) {
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
@@ -22,12 +22,12 @@ FragTrap::FragTrap(const std::string& name)
 }
 
 FragTrap::FragTrap(const FragTrap& other)
-	: ScavTrap(other) {
+	: ClapTrap(other) {
 	std::cout << "FragTrap \"" << this->_name << "\" copy-constructed" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap &other) {
-	ScavTrap::operator=(other);
+	ClapTrap::operator=(other);
 	return *this;
 }
 
