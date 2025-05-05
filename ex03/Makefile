@@ -6,14 +6,14 @@
 #    By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/03 18:52:46 by kiwasa            #+#    #+#              #
-#    Updated: 2025/05/03 22:27:23 by kiwasa           ###   ########.fr        #
+#    Updated: 2025/05/05 15:36:40 by kiwasa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = DiamondTrap
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow
 
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJS = $(SRCS:.cpp=.o)

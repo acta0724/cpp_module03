@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iwasakatsuya <iwasakatsuya@student.42.f    +#+  +:+       +#+        */
+/*   By: kiwasa <kiwasa@student.42.jp>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 18:53:35 by kiwasa            #+#    #+#             */
-/*   Updated: 2025/05/05 15:14:04 by iwasakatsuy      ###   ########.fr       */
+/*   Updated: 2025/05/05 15:35:08 by kiwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 DiamondTrap::DiamondTrap(void)
-	: ClapTrap("default_clap"),
+	: ClapTrap("default_clap_name"),
 	  ScavTrap("default_scav"),
 	  FragTrap("default_frag") {
 		this->_name = "default";
@@ -26,7 +26,7 @@ DiamondTrap::DiamondTrap(void)
 }
 
 DiamondTrap::DiamondTrap(const std::string& name)
-	: ClapTrap(name + "_clap"),
+	: ClapTrap(name + "_clap_name"),
 	  ScavTrap(name + "_scav"),
 	  FragTrap(name + "_frag") {
 		this->_name = name;
